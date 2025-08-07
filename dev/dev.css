@@ -1,0 +1,30 @@
+
+/* Flex box for project cards */
+.allcards {
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.cardbox {
+  width: 350px;
+  height: 200px;
+  background-color: var(--color-colombiablue);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px var(--color-cerulean);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.cardimage {
+  opacity: 0.7;
+  width: 100px;
+  height: 200px;
+}
+
+.cardlinks {
+  grid-column: 2;
+  grid-row: 2;
+}

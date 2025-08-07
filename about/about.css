@@ -1,0 +1,36 @@
+
+/* Inquiry and Contact page related */
+input{
+  width: 250px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+}
+
+#inquiry {
+  width: 500px;
+  height: 250px;
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 14px;
+}
+
+input[type=submit] {
+  width: 250px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+

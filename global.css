@@ -1,0 +1,88 @@
+
+/* For setting default color palettes */
+:root{
+    --color-antiflashwhite: #EAEBED;
+    --color-cerulean: #007090;
+    --color-colombiablue: #CDE0F4;
+}
+
+/* For main BG color */
+body {
+    background-color: var(--color-antiflashwhite);
+    z-index: -555;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* @media screen (min-width:) and (max-width:) {
+    
+} */
+
+
+/* Hat Navigation Bar related */
+.navBar {
+    background-color: var(--color-cerulean);
+    /* background-image: url("img_tree.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-position: right top; */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    z-index: 999;
+}
+
+.navChoices {
+    position: fixed;
+    bottom: 0;
+}
+
+.hat { 
+    position: relative;
+}
+
+.hatText {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    font-size: 18px;
+    background-color: blanchedalmond;
+    overflow: wrap;
+}
+
+.hat a:link {
+    text-decoration: none;
+}
+
+.hat a:visited {
+    text-decoration: none;
+}
+
+.hat a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: blanchedalmond;
+}
+
+.hat a:after {
+    text-decoration: none;
+}
+
+
+
+/* For non-nav part sizing; technically just taking out the nav bar size's worth of space, this happens apparently bc of the "position: fixed" */
+.notNavBar {
+    padding-right: 300px;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.contact {
+    display: flex;
+    bottom: 0;
+    left: 0;
+}
