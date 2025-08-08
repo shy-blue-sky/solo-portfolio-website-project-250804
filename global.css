@@ -4,6 +4,8 @@
     --color-antiflashwhite: #EAEBED;
     --color-cerulean: #007090;
     --color-colombiablue: #CDE0F4;
+    --color-glaucous: #507DBC;
+    --color-vistablue: #7A9CCD;
 }
 
 /* For main BG color */
@@ -16,13 +18,10 @@ li {
     list-style-type: none;
 }
 
-/* @media screen (min-width:) and (max-width:) {
-    
-} */
-
-
 /* Hat Navigation Bar related */
 .navBar {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-cerulean);
     /* background-image: url("img_tree.png"); */
     /* background-repeat: no-repeat; */
@@ -30,7 +29,7 @@ li {
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 300px;
+    width: 200px;
     height: 100%;
     z-index: 999;
 }
@@ -42,16 +41,27 @@ li {
 
 .hat { 
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.hatimage {
+    width: 75px;
+    height: auto;
 }
 
 .hatText {
     position: absolute;
-    top: 50%;
-    left: 0;
-    text-align: center;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 16px;
     background-color: blanchedalmond;
     overflow: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hat a:link {
@@ -72,8 +82,6 @@ li {
     text-decoration: none;
 }
 
-
-
 /* For non-nav part sizing; technically just taking out the nav bar size's worth of space, this happens apparently bc of the "position: fixed" */
 .notNavBar {
     padding-right: 300px;
@@ -85,4 +93,51 @@ li {
     display: flex;
     bottom: 0;
     left: 0;
+}
+
+/* For mobile, making navBar horizontal and above screen */
+@media (max-width: 480px) {
+    .navBar {
+        display: grid;
+        grid-template-rows: 10% 10% 10% 10% 10%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 150px;
+        z-index: 999;
+    }
+    
+    .navChoices {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        top: 0;
+        height: 75px;
+    }
+
+    .hat { 
+        position: relative;
+        display: grid;
+    }
+
+    .hatText {
+        position: absolute;
+        top: 50%;;
+        text-align: center;
+        font-size: 16px;
+        background-color: blanchedalmond;
+        overflow: wrap;
+    }
+
+    .hatimage {
+        width: 50px;
+        height: auto;
+    }
+
+    .notNavBar {
+        padding-top: 150px;
+        padding-right: 0px;
+    }
+    .allcards {
+        flex:100%;
+    }
 }
